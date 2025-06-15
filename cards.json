@@ -32,7 +32,7 @@
     "name": "Frog Wizard",
     "atk": 2300,
     "def": 2000,
-    "image": "images/FrogWizard.png"
+    "image": "images/RibbitWizard.png"
   },
   {
     "id": "toadassassin006",
@@ -68,5 +68,19 @@
     "atk": 1200,
     "def": 3000,
     "image": "images/LilypadGuardian.png"
+  },
+  {
+    "id": "gunbit011",
+    "name": "Gunbit Cabbage Junior",
+    "atk": 9000,
+    "def": 10,
+    "image": "images/GunBit.png"
+  },
+  {
+    "id": "evilribbit012",
+    "name": "Evil Ribbit",
+    "atk": 5000,
+    "def": 4000,
+    "image": "images/EvilRibbit.png"
   }
 ]
