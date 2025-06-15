@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ribbit: The Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <h1>Ribbit: The Game</h1>
+    <div id="authContainer">
+        <input id="email" type="email" placeholder="Email" />
+        <input id="password" type="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+        <div id="authMessage"></div>
+    </div>
+
+    <div id="gameContainer" style="display:none;">
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+
+        <div class="deck-controls">
+            <button id="randomDeckBtn">Generate Random Deck (10 cards)</button>
+            <button id="unlockRandomDeckBtn">Unlock Random 10 Cards</button>
+            <button id="saveDeckBtn" onclick="saveDeck()">Save Deck</button>
+        </div>
+
+        <div>
+            Deck Count: <span id="deckCount">0</span>
+        </div>
+
+        <div id="gameboard">
+            <div id="enemyField" class="card-row rotated-row">
+                <h2>Enemy Field</h2>
+            </div>
+
+            <div id="battleZone">
+                <div id="deckArea" class="column">
+                    <button id="drawBtn" onclick="drawCard()">Draw Card</button>
+                    <!-- Changed deckCount span id here to avoid duplicate -->
+                    <p>Deck: <span id="deckCountDisplay">0</span></p>
+                </div>
+
+                <div id="playerHand" class="card-row"></div>
+                <div id="playerField" class="card-row"></div>
+            </div>
+        </div>
+
+        <div id="info">
+            <p>Player LP: <span id="playerLP">8000</span></p>
+            <p>Enemy LP: <span id="enemyLP">8000</span></p>
+            <p id="gameLog">Game start...</p>
+        </div>
+
+        <div id="winScreen" class="overlay-screen" style="display:none;">
+            <h1>You Win!</h1>
+            <p>You've earned 5 new cards!</p>
+            <button onclick="claimWinRewards()">Open Pack</button>
+            <button id="winRetryBtn">Retry</button>
+        </div>
+
+        <div id="loseScreen" class="overlay-screen" style="display:none;">
+            <h1>You Lose!</h1>
+            <p>Better luck next time!</p>
+            <button id="loseRetryBtn">Retry</button>
+        </div>
+
+        <button onclick="toggleCollectionMenu()">View Collection</button>
+
+        <div id="collectionMenu" style="display:none;">
+            <h2>Your Unlocked Cards</h2>
+            <div id="cardCollection" class="card-grid"></div>
+
+            <h3>Your Deck (Max 20 cards)</h3>
+            <div id="currentDeck" class="card-row"></div>
+
+            <!-- Removed duplicate buttons -->
+            <!-- Use these buttons already declared above in the deck-controls -->
+            <button onclick="toggleCollectionMenu()">Close Collection</button>
+        </div>
+    </div>
+
+    <!-- Scripts should be outside of containers and before closing body -->
+    <script src="cards.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

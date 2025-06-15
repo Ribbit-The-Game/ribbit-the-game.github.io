@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ribbit001",
+    "name": "Ribbit",
+    "atk": 3000,
+    "def": 2500,
+    "image": "images/RCJ.png"
+  },
+  {
+    "id": "robotribbit002",
+    "name": "Robot Ribbit",
+    "atk": 2500,
+    "def": 2100,
+    "image": "images/RobotRibbit.png"
+  },
+  {
+    "id": "ribbitknight003",
+    "name": "Ribbit Knight",
+    "atk": 1800,
+    "def": 1600,
+    "image": "images/RibbitKnight.png"
+  },
+  {
+    "id": "megaribbit004",
+    "name": "Mega Ribbit",
+    "atk": 3500,
+    "def": 2900,
+    "image": "images/MegaRibbit.png"
+  },
+  {
+    "id": "frogwizard005",
+    "name": "Frog Wizard",
+    "atk": 2300,
+    "def": 2000,
+    "image": "images/FrogWizard.png"
+  },
+  {
+    "id": "toadassassin006",
+    "name": "Toad Assassin",
+    "atk": 1900,
+    "def": 1000,
+    "image": "images/ToadAssassin.png"
+  },
+  {
+    "id": "swampspirit007",
+    "name": "Swamp Spirit",
+    "atk": 1500,
+    "def": 2500,
+    "image": "images/SwampSpirit.png"
+  },
+  {
+    "id": "ribbitsorcerer008",
+    "name": "Ribbit Sorcerer",
+    "atk": 2600,
+    "def": 2300,
+    "image": "images/RibbitSorcerer.png"
+  },
+  {
+    "id": "battletoad009",
+    "name": "Battletoad",
+    "atk": 3000,
+    "def": 1500,
+    "image": "images/Battletoad.png"
+  },
+  {
+    "id": "lilypadguardian010",
+    "name": "Lilypad Guardian",
+    "atk": 1200,
+    "def": 3000,
+    "image": "images/LilypadGuardian.png"
+  }
+]
